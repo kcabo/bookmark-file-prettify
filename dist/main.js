@@ -1,0 +1,1 @@
+document.querySelectorAll("a").forEach((e=>{let t=e.getAttribute("ICON");e.style.backgroundImage="url("+t+")";let a=e.getAttribute("ADD_DATE"),l=new Date(1e3*a);addDate=l.toLocaleDateString("ja-JP");let r=document.createElement("span");r.textContent=addDate,e.after(r)}));
