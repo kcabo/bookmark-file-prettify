@@ -1,3 +1,5 @@
+import './style.scss';
+
 window.onload = function() {
     const linkTags = document.querySelectorAll<HTMLElement>('a');
     linkTags.forEach((a) => {

@@ -1,1 +1,0 @@
-window.onload=function(){document.querySelectorAll("a").forEach((function(t){!function(t){var e=t.getAttribute("ICON");t.style.backgroundImage="url("+e+")"}(t),function(t){var e,n=(e=+t.getAttribute("ADD_DATE"),new Date(1e3*e).toLocaleDateString("ja-JP")),o=document.createElement("span");o.textContent=n,t.after(o)}(t)}))};
