@@ -1,16 +1,22 @@
 {
   "name": "bookmark-file-prettify",
   "version": "1.0.1",
-  "description": "",
-  "main": "src/index.js",
+  "description": "improve the visual appearance of NETSCAPE-Bookmark-files",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack-dev-server --hot --open --content-base dist/",
+    "start": "webpack serve"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "kcabo",
+  "license": "MIT",
+  "homepage": "https://github.com/kcabo/bookmark-file-prettify",
   "dependencies": {},
   "devDependencies": {
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.2.4",
     "webpack": "^5.37.1",
-    "webpack-cli": "^4.7.0"
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
