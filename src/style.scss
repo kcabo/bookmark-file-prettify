@@ -1,6 +1,3 @@
-$web-icon: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIyIDIgMTYgMTYiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgMmE4IDggMCAxMDAgMTYgOCA4IDAgMDAwLTE2ek05IDE2YTYgNiAwIDAxLTUtN2w0IDN2MWwxIDJ2MXptNi0ybC0yLTFoLTF2LTItMUg3VjhoMlY2aDJsMS0yYTYgNiAwIDAxMyAxMHoiIGZpbGw9IiM5Njk2OTYiLz48L3N2Zz4=";
-$folder-icon: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIyIDQgMjAgMTYiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTAgNEg0YTIgMiAwIDAwLTIgMnYxMmMwIDEuMS45IDIgMiAyaDE2YTIgMiAwIDAwMi0yVjhhMiAyIDAgMDAtMi0yaC04bC0yLTJ6IiBmaWxsPSIjM2ZjMWM5Ii8+PC9zdmc+";
-
 * {
     margin: 0;
 }
@@ -14,7 +11,7 @@ h1 {
     padding: 40px 50px 10px;
 }
 a {
-    background: url($web-icon) center left no-repeat;
+    background: url('img/public.svg') center left no-repeat;
     padding-left: 22px;
     margin-left: 4px;
     text-decoration: none;
@@ -28,16 +25,17 @@ dl {
     margin: 0 0 20px 20px;
 }
 h3, a {
-    line-height: 2;
+    line-height: 2.2;
     color: #364f6b;
     cursor: pointer;
 }
 h3 {
     font-size: 1em;
-    background: url($folder-icon) center left no-repeat;
+    background: url('img/folder.svg') center left no-repeat;
     padding-left: 25px;
+    display: inline-block;
 
-    &+ dl {
+    &~ dl {
         display: none;
     }
     &::after {
@@ -46,7 +44,7 @@ h3 {
     }
 
     &.show {
-        + dl {
+        ~ dl {
             display: block;
         }
         &::after {

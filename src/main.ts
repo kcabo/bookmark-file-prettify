@@ -1,20 +1,24 @@
 import './style.scss';
 
 window.onload = function() {
+    // 全てのリンクにファビコンを適用・追加日を表示
     const linkTags = document.querySelectorAll<HTMLElement>('a');
     linkTags.forEach((a) => {
         setBackgroundImage(a);
         appendAddDateElm(a);
     });
 
+    // 全てのフォルダーをトグルボタン化・追加日を表示
     const pullDownCaptions = document.querySelectorAll<HTMLElement>('h3');
     pullDownCaptions.forEach((h3) => {
         h3.addEventListener('click', (e) => {
             const target = e.currentTarget as HTMLElement;
             toggleVisibility(target);
         });
+        appendAddDateElm(h3);
     });
 
+    // 一番根っこのフォルダーのみ展開
     const rootFolderCaption = document.querySelector<HTMLElement>('h3');
     toggleVisibility(rootFolderCaption);
 }

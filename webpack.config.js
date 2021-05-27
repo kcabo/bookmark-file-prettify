@@ -23,7 +23,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              url: false, // オプションでCSS内のurl()メソッドの取り込みを禁止する
+              url: true, // CSS内のurl()メソッドの取り込み
               sourceMap: enabledSourceMap,
               importLoaders: 2
             }
@@ -35,6 +35,10 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/inline',
       }
     ],
   },
