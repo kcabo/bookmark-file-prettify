@@ -6,11 +6,24 @@ window.onload = function() {
         setBackgroundImage(a);
         appendAddDateElm(a);
     });
+
+    const pullDownCaptions = document.querySelectorAll<HTMLElement>('h3');
+    pullDownCaptions.forEach((h3) => {
+        h3.addEventListener('click', (e) => {
+            const target = e.currentTarget as HTMLElement;
+            toggleVisibility(target);
+        });
+    });
+
+    const rootFolderCaption = document.querySelector<HTMLElement>('h3');
+    toggleVisibility(rootFolderCaption);
 }
 
 function setBackgroundImage(a: HTMLElement) {
     const iconBase64: string = a.getAttribute('ICON');
-    a.style.backgroundImage = 'url(' + iconBase64 + ')';
+    if (iconBase64) {
+        a.style.backgroundImage = 'url(' + iconBase64 + ')';
+    }
 }
 
 function appendAddDateElm(a: HTMLElement) {
@@ -25,4 +38,8 @@ function unixTimeToDateString(unixTime: number): string {
     const d = new Date(unixTime * 1000);
     const dateString = d.toLocaleDateString('ja-JP');
     return dateString
+}
+
+function toggleVisibility(target: HTMLElement) {
+    target.classList.toggle('show');
 }
