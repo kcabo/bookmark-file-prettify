@@ -1,5 +1,5 @@
 const path = require('path');
-const MODE = 'production';
+const MODE = 'development';
 const enabledSourceMap = MODE === 'development';
 
 module.exports = {
@@ -19,9 +19,9 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          "style-loader",
+          'style-loader',
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               url: false, // オプションでCSS内のurl()メソッドの取り込みを禁止する
               sourceMap: enabledSourceMap,
@@ -29,7 +29,7 @@ module.exports = {
             }
           },
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               sourceMap: enabledSourceMap
             },
@@ -44,7 +44,8 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: "dist",
-    open: true
+    contentBase: 'dist',
+    open: true,
+    watchContentBase: true,
   }
 };
