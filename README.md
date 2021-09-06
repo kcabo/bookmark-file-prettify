@@ -11,7 +11,7 @@
     Apply styles to your NETSCAPE-Bookmark-files
 </p>
 
-![no image](http://placehold.jp/eeeeee/cccccc/800x180.png?text=placeholder)
+![styled bookmark file](https://user-images.githubusercontent.com/37576764/132171562-013b397a-f990-4ced-a260-73139baebd34.png)
 
 ## Features
 - Tree folder view
